@@ -1,4 +1,5 @@
 var os = require('os');
+var colors = require('colors');
 var TimeTools = require('./TimeTools');
 
 function getOSinfo () {
@@ -18,12 +19,12 @@ function getOSinfo () {
     os.type() === 'Windows_NT' ? 'Windows' :
       os.type();
 
-  console.log('System: ', type);
-  console.log('Release: ', release);
-  console.log('CPU: ' + cpu);
+  console.log('System: '.grey, type);
+  console.log('Release: '.red, release);
+  console.log('CPU: '.blue + cpu);
 //   console.log('Uptime: ~' + (uptime / 60).toFixed(0) + ' min');
-  console.log('Uptime: ' + TimeTools.print(uptime));
-  console.log('User name: ', userInfo.username);
+  console.log('Uptime: '.green + TimeTools.print(uptime));
+  console.log('User name: '.yellow, userInfo.username);
   console.log('Home dir: ', userInfo.homedir);
 }
 
