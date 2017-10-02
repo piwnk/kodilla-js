@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  font-family: Calibri;
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+  display: grid;
+  height: 100vh;
+  align-content: center;
+}
+
+button {
+  border: 0;
+  background-color: red;
+  color: white;
+  width: 200px;
+  height: 3em;
+}
+
+button:first-child {
+  background-color: #0059FF;
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
