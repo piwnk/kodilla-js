@@ -29,7 +29,8 @@ const appendTextToFile = () => {
       // fs.writeFile('./tekst.txt', 'A tak wyglądają dane po zapisie', function (err) {
       fs.appendFile('./tekst.txt', '\nA tak wyglądają dane po zapisie', function (err) {
          if (err) throw err;
-         fs.readFile('./tekst.txt', 'utf-8', function (err, data) {
+         // fs.readFile('./tekst.txt', 'utf-8', function (err, data) {
+            fs.readFile('./tekst.txt', 'utf-8', (err, data) => {
             console.log("Dane po zapisie");
             console.log(data.red);
          });
@@ -40,10 +41,14 @@ const appendTextToFile = () => {
 
 
 const readDirectory = () => {
-   fs.readdir('./', function (err, files) {
-      console.log(files);
+   fs.readdir('./', (err, files) => {
+      // console.log(files);
       fs.writeFile('./directoryContent.txt', files.join("\n"));
+      // fs.appendFile('./directoryContent.txt', "\nThat's it!");
    });
 };
 
+// printImageProperties();
+// readWriteTextFile();
+// appendTextToFile();
 readDirectory();
