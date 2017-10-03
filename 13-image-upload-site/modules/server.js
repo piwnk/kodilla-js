@@ -5,23 +5,29 @@ const handlers = require('./handlers');
 function start () {
   function onRequest (request, response) {
     console.log('Odebrano zapytanie.');
-    response.writeHead(200, {'Content-Type': 'text/plain; charset=utf-8'});
-    // response.write("Pierwsze koty za płoty")
-    // response.end()
-
+    console.log(request.url.green);
     switch (request.url) {
       case '/':
       case '/start':
-         handlers.welcome(request, response);
-         break;
+        handlers.welcome(request, response);
+        break;
       case '/upload':
-         handlers.upload(request, response);
-         break;
+        handlers.upload(request, response);
+        break;
       case '/show':
-         handlers.show(request, response);
-         break;
+        handlers.show(request, response);
+        break;
+      case (request.url.match(/(\.css|\.css.map)$/) ? request.url : false):
+        console.log("That's a CSS, or CSS.MAP file".blue);
+        handlers.css(request, response);
+        break;      
+      case (request.url.match(/(\.jpg|\.png)$/) ? request.url : false):
+        console.log("That's a JPG or PNG file".blue);
+        handlers.image(request, response);
+        break;
       default:
-         handlers.error(request, response);
+        handlers.error(request, response);
+        break;
     }
   }
 
