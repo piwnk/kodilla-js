@@ -23,20 +23,13 @@ server.on('request', function (request, response) {
 
   if (request.method === 'GET' && request.url === '/') {
     responseWithFile(response, './index.html');
-   //  response.end();
   } else if (request.method === 'GET' && request.url.endsWith('.css')) {
      console.log("." + request.url);
      responseWithFile(response, "." + request.url);
   } else {
     response.statusCode = 404;
     responseWithFile(response, './404.jpg');
-   //  response.end();
   }
-//   response.end();
 });
 
 server.listen(9000);
-
-
-// Where to put response.end?
-// What about css files?
