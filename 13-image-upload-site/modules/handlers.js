@@ -12,9 +12,13 @@ const responseWithFile = (response, file) => {
   const ext = file.split('.').slice(-1)[0];
   // console.log(ext);
   response.setHeader('Content-Type', `${extensions[ext]}; charset=utf-8`);
-  console.log(response._headers);
+  // console.log(response._headers);
   fs.readFile(file, (err, content) => {
-    if (err) throw err;
+    if (err) {
+      console.log(err.red);
+      exports.error(undefined, response);
+      return;
+    }
     response.write(content);
     response.end();
   });
