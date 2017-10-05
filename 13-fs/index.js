@@ -43,7 +43,7 @@ const appendTextToFile = () => {
 
 const readDirectory = () => {
   fs.readdir('./', (err, files) => {
-    console.log(files)
+    console.log(files);
     fs.writeFile('./directoryContent.txt', files.join('\n'), function (err) {
       if (err) throw err;
     });
