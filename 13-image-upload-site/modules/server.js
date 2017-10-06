@@ -22,7 +22,7 @@ function start () {
         handlers.css(request, response);
         break;      
       case (request.url.match(/(\.jpg|\.png)$/) ? request.url : false):
-        console.log("That's a JPG or PNG file".blue);
+        console.log("That's a JPG or PNG file".blue); 
         handlers.image(request, response);
         break;
       default:
