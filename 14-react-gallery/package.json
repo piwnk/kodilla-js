@@ -1,0 +1,19 @@
+{
+  "name": "14-react-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "node-dom": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.2"
+  }
+}
