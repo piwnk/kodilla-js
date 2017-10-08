@@ -1,0 +1,30 @@
+* {
+   box-sizing: border-box;
+   // border: 1px solid coral;
+   text-align: center;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.wrp {
+   border: 1px solid coral;
+   border-bottom: 0;
+   &:last-child {
+      border-bottom: 1px solid coral;
+   }
+   padding: 20px;
+
+   p:last-child {
+      font-size: 2em;
+      font-weight: bold;
+   }
+   .btn {
+      color: white;
+      background: coral;
+      // border: 1px solid white;
+      border: 0;
+      border-radius: 5px;
+      margin-left: 5px;
+      width: 50px;
+      height: 30px;
+   }
+}
