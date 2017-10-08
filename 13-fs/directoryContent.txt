@@ -1,0 +1,6 @@
+directoryContent.txt
+img
+index.js
+node_modules
+package.json
+tekst.txt

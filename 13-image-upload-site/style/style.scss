@@ -1,0 +1,56 @@
+* {
+   font-family: Calibri;
+   box-sizing: border-box;
+   margin: 0 auto;
+}
+
+body {
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   height: 100vh;
+   width: 100vw;
+   padding: 30px;
+}
+
+img {
+   width: calc(100vw - 50px);
+   border: 10px solid #FC0202;
+   border-radius: 5px;
+   
+}
+
+form {
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   grid-gap: 20px;
+   border: 1px solid coral;
+   padding: 20px;
+
+   input[type=text] {
+      padding:5px; 
+      border:2px solid #ccc; 
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+  }
+  
+  input[type=text]:focus {
+      border-color:#333;
+  }
+
+  input[type=file] {
+   padding:5px 15px; 
+   // color: white;
+   // background: #006EFF; 
+   border:0 none;
+}
+  input[type=submit] {
+      padding:5px 15px; 
+      color: white;
+      background: #006EFF; 
+      border:0 none;
+      cursor:pointer;
+      // border-radius: 5px; 
+  }
+}
