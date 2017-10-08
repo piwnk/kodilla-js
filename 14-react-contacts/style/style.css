@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+  border: 1px solid coral;
+}
+
+.contactsList .contactItem {
+  display: flex;
+}
+
+.contactsList .contactItem div:first-child .contactImage {
+  width: 100px;
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */
