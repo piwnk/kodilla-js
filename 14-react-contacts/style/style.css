@@ -1,14 +1,36 @@
 * {
   box-sizing: border-box;
-  border: 1px solid coral;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.contactsList .contactItem {
+body {
+  margin: 0 auto;
+}
+
+.wrp .contactForm {
   display: flex;
+  flex-direction: column;
+  width: 40vw;
 }
 
-.contactsList .contactItem div:first-child .contactImage {
+.wrp .contactsList {
+  list-style-type: none;
+  padding: 0;
+  width: 40vw;
+}
+
+.wrp .contactsList .contactItem {
+  display: flex;
+  border: 1px solid #008cff;
+}
+
+.wrp .contactsList .contactItem > div:first-child .contactImage {
   width: 100px;
+}
+
+.wrp .contactsList .contactItem > div:last-child {
+  margin-left: 20px;
+  width: 300px;
 }
  
 

@@ -29,7 +29,7 @@ const contactForm = {
 class App extends Component {
    render() {
       return (
-         <div>
+         <div className="wrp">
             <ContactForm contact={contactForm} />
             <Contacts items={contacts} />
          </div>

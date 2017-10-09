@@ -989,32 +989,20 @@ module.exports = getActiveElement;
 
 /***/ }),
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__App__ = __webpack_require__(32);
 
 
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(19);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _App = __webpack_require__(32);
-
-var _App2 = _interopRequireDefault(_App);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// const React = require('react');
-// const ReactDOM = require('react-dom');
-// const App = require('./App');
 
 
-var app = _react2.default.createElement(_App2.default);
-_reactDom2.default.render(app, document.getElementById('app'));
+Object(__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"])(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__App__["a" /* default */], null), document.getElementById('app'));
 
 /***/ }),
 /* 17 */
@@ -21182,42 +21170,19 @@ module.exports = function() {
 
 /***/ }),
 /* 32 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ContactForm__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Contacts__ = __webpack_require__(34);
 
 
-Object.defineProperty(exports, "__esModule", {
-   value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _ContactForm = __webpack_require__(33);
-
-var _ContactForm2 = _interopRequireDefault(_ContactForm);
-
-var _Contacts = __webpack_require__(34);
-
-var _Contacts2 = _interopRequireDefault(_Contacts);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // const React = require('react');
 
 
-// const ContactForm = require('./ContactForm');
-// const Contacts = require('./Contacts');
 
-var contacts = [{
+const contacts = [{
    id: 1,
    firstName: 'Jan',
    lastName: 'Nowak',
@@ -21234,288 +21199,167 @@ var contacts = [{
    email: 'zbigniew.koziol@example.com'
 }];
 
-var contactForm = {
+const contactForm = {
    firstName: '',
    lastName: '',
    email: ''
 };
 
-// const App = React.createClass({
-
-var App = function (_Component) {
-   _inherits(App, _Component);
-
-   function App() {
-      _classCallCheck(this, App);
-
-      return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+class App extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+   render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+         'div',
+         { className: 'wrp' },
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__ContactForm__["a" /* default */], { contact: contactForm }),
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Contacts__["a" /* default */], { items: contacts })
+      );
    }
+};
 
-   _createClass(App, [{
-      key: 'render',
-      value: function render() {
-         return _react2.default.createElement(
-            'div',
-            null,
-            _react2.default.createElement(_ContactForm2.default, { contact: contactForm }),
-            _react2.default.createElement(_Contacts2.default, { items: contacts })
-         );
-      }
-   }]);
-
-   return App;
-}(_react.Component);
-
-;
-// });
-
-// module.exports = App;
-exports.default = App;
+/* harmony default export */ __webpack_exports__["a"] = (App);
 
 /***/ }),
 /* 33 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(7);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // const React = require('react');
-// const PropTypes = require('prop-types');
-// const createReactClass = require('create-react-class');
-
-
-// const ContactForm = React.createClass({
-// const ContactForm = createReactClass({
-var ContactForm = function (_Component) {
-   _inherits(ContactForm, _Component);
-
-   function ContactForm() {
-      _classCallCheck(this, ContactForm);
-
-      return _possibleConstructorReturn(this, (ContactForm.__proto__ || Object.getPrototypeOf(ContactForm)).apply(this, arguments));
+class ContactForm extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+   render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+         'form',
+         { className: 'contactForm' },
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+            type: 'text',
+            placeholder: 'Imi\u0119',
+            value: this.props.contact.firstName
+         }),
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+            type: 'text',
+            placeholder: 'Nazwisko',
+            value: this.props.contact.lastName
+         }),
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('input', {
+            type: 'text',
+            placeholder: 'email',
+            value: this.props.contact.email
+         }),
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'button',
+            { type: 'submit' },
+            'Dodaj kontakt'
+         )
+      );
    }
-
-   _createClass(ContactForm, [{
-      key: 'render',
-      value: function render() {
-         return _react2.default.createElement(
-            'form',
-            { className: 'contactForm' },
-            _react2.default.createElement('input', {
-               type: 'text',
-               placeholder: 'Imi\u0119',
-               value: this.props.contact.firstName
-            }),
-            _react2.default.createElement('input', {
-               type: 'text',
-               placeholder: 'Nazwisko',
-               value: this.props.contact.lastName
-            }),
-            _react2.default.createElement('input', {
-               type: 'text',
-               placeholder: 'email',
-               value: this.props.contact.email
-            }),
-            _react2.default.createElement(
-               'button',
-               { type: 'submit' },
-               'Dodaj kontakt'
-            )
-         );
-      }
-   }]);
-
-   return ContactForm;
-}(_react.Component);
-
-;
-// });
-
-ContactForm.propTypes = {
-   contact: _propTypes2.default.object.isRequired
 };
 
-module.exports = ContactForm;
+ContactForm.propTypes = {
+   contact: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (ContactForm);
 
 /***/ }),
 /* 34 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Contact__ = __webpack_require__(35);
 
 
-Object.defineProperty(exports, "__esModule", {
-   value: true
-});
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(7);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _Contact = __webpack_require__(35);
-
-var _Contact2 = _interopRequireDefault(_Contact);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-// const Contacts = React.createClass({
-var Contacts = function (_Component) {
-   _inherits(Contacts, _Component);
-
-   function Contacts() {
-      _classCallCheck(this, Contacts);
-
-      return _possibleConstructorReturn(this, (Contacts.__proto__ || Object.getPrototypeOf(Contacts)).apply(this, arguments));
-   }
-
-   _createClass(Contacts, [{
-      key: 'render',
-      value: function render() {
-         var contacts = this.props.items.map(function (contact) {
-            return _react2.default.createElement(_Contact2.default, {
-               item: contact,
-               key: contact.id
-            });
+class Contacts extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+   render() {
+      const contacts = this.props.items.map(contact => {
+         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__Contact__["a" /* default */], {
+            item: contact,
+            key: contact.id
          });
-         return _react2.default.createElement(
-            'ul',
-            { className: 'contactsList' },
-            contacts
-         )
-         // React.createElement('ul', { className: 'contactsList' }, contacts)
-         ;
-      }
-   }]);
-
-   return Contacts;
-}(_react.Component);
+      });
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+         'ul',
+         { className: 'contactsList' },
+         contacts
+      );
+   }
+}
 
 Contacts.propTypes = {
-   items: _propTypes2.default.array.isRequired
+   items: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
 };
 
-exports.default = Contacts;
+/* harmony default export */ __webpack_exports__["a"] = (Contacts);
 
 /***/ }),
 /* 35 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 
 
-Object.defineProperty(exports, "__esModule", {
-   value: true
-});
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(7);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Contact = function (_Component) {
-   _inherits(Contact, _Component);
-
-   function Contact() {
-      _classCallCheck(this, Contact);
-
-      return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).apply(this, arguments));
-   }
-
-   _createClass(Contact, [{
-      key: 'render',
-      value: function render() {
-         return _react2.default.createElement(
+class Contact extends __WEBPACK_IMPORTED_MODULE_0_react__["Component"] {
+   render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+         'div',
+         { className: 'contactItem' },
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'div',
-            { className: 'contactItem' },
-            _react2.default.createElement(
-               'div',
-               null,
-               _react2.default.createElement('img', {
-                  className: 'contactImage',
-                  src: 'http://icons.veryicon.com/ico/System/100%20Flat%20Vol.%202/contacts.ico',
-                  alt: 'contact'
-               })
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
+               className: 'contactImage',
+               src: 'http://icons.veryicon.com/ico/System/100%20Flat%20Vol.%202/contacts.ico',
+               alt: 'contact'
+            })
+         ),
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            null,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+               'p',
+               { className: 'contactLabel' },
+               'Imi\u0119: ',
+               this.props.item.firstName
             ),
-            _react2.default.createElement(
-               'div',
-               null,
-               _react2.default.createElement(
-                  'p',
-                  { className: 'contactLabel' },
-                  'Imi\u0119: ',
-                  this.props.item.firstName
-               ),
-               _react2.default.createElement(
-                  'p',
-                  { className: 'contactLabel' },
-                  'Nazwisko: ',
-                  this.props.item.lastName
-               ),
-               _react2.default.createElement(
-                  'a',
-                  {
-                     className: 'contactEmail',
-                     href: 'mailto:{this.props.item.email}'
-                  },
-                  this.props.item.email
-               )
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+               'p',
+               { className: 'contactLabel' },
+               'Nazwisko: ',
+               this.props.item.lastName
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+               'a',
+               {
+                  className: 'contactEmail',
+                  href: 'mailto:{this.props.item.email}'
+               },
+               this.props.item.email
             )
-         );
-      }
-   }]);
-
-   return Contact;
-}(_react.Component);
-
-;
-
-Contact.propTypes = {
-   item: _propTypes2.default.object.isRequired
+         )
+      );
+   }
 };
 
-// module.exports = Contact;
-exports.default = Contact;
+Contact.propTypes = {
+   item: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object.isRequired
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (Contact);
 
 /***/ })
 /******/ ]);
