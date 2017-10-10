@@ -1,16 +1,23 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const GIPHY_LOADING_URL = 'http://www.ifmo.ru/images/loader.gif';
-const styles = {
-   minHeight: '310px',
-   margin: '0.5em'
-};
+// const styles = {
+//    minHeight: '310px',
+//    margin: '0.5em'
+// };
 
-class Gif extends Component {
+// class Gif extends Component {
+const Gif = React.createClass({
+   getInitialState() {
+      console.log('Gif init');
+      return {
+         searchingText: ''
+      };
+   },
    getUrl() {
       return this.props.sourceUrl || GIPHY_LOADING_URL;
-   }
+   },
 
    render() {
       const url = this.props.loading ? GIPHY_LOADING_URL : this.props.url;
@@ -18,16 +25,16 @@ class Gif extends Component {
          <div>
             <a
                href={this.getUrl()}
-               style={styles}
-               title="view this on giphy"
+               /* style={styles} */
+               /* {title="view this on giphy"} */
                target="new"
             >
                <img
                   id="gif"
                   src={url}
                   style={{
-                     width: '100%',
-                     maxWidth: '350px'
+                     // width: '100%',
+                     // maxWidth: '350px'
                   }}
                   alt="gif"
                />
@@ -35,12 +42,12 @@ class Gif extends Component {
          </div>
       );
    }
-}
+});
 
 Gif.propTypes = {
-   sourceUrl: PropTypes.string.isRequired,
-   loading: PropTypes.bool.isRequired,
-   url: PropTypes.string.isRequired
+   // sourceUrl: PropTypes.string.isRequired,
+   // loading: PropTypes.bool.isRequired,
+   // url: PropTypes.string.isRequired
 };
 
 export default Gif;

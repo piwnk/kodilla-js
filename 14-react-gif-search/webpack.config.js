@@ -7,24 +7,35 @@ module.exports = {
       path: path.resolve(__dirname, 'build')
    },
    module: {
-      loaders: [
-         {
-            test: /\.jsx?$/,
-            exclude: /node_modules/,
-            loader: 'react-hot-loader!babel-loader'
-         },
-         {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loaders: ['babel-loader', 'eslint-loader']
+      rules: [{
+         test: /.jsx?$/,
+         include: [
+            path.resolve(__dirname, 'components')
+         ],
+         exclude: [
+            path.resolve(__dirname, 'node_modules'),
+            path.resolve(__dirname, 'bower_components')
+         ],
+         loader: 'babel-loader',
+         query: {
+            presets: ['react', 'env'] // , 'stage-0'] // , 'env']
          }
-      ]
+      }],
+      // loaders: [
+      //    {
+      //       test: /\.jsx?$/,
+      //       exclude: /node_modules/,
+      //       loader: 'react-hot-loader!babel-loader'
+      //    },
+      //    {
+      //       test: /\.js$/,
+      //       exclude: /node_modules/,
+      //       loaders: ['babel-loader', 'eslint-loader']
+      //    }
+      // ]
    },
    resolve: {
       extensions: ['.json', '.js', '.jsx', '.css']
    },
-// devtool: 'source-map',
-// devServer: {
-//    publicPath: path.join('/dist/')
-// }
 };
+

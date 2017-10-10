@@ -1,11 +1,14 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 
-class Search extends Component {
-   // getIinitialState() {
-   //    return {
-   //       searchingText: ''
-   //    }
-   // };
+// class Search extends Component {
+const Search = React.createClass({
+   getInitialState() {
+      console.log('Search init');
+      return {
+         searchingText: ''
+      };
+   },
+
    handleChange(e) {
       const searchingText = e.target.value;
       this.setState({
@@ -16,36 +19,32 @@ class Search extends Component {
       if (searchingText.length > 2) {
          this.props.onSearch(searchingText);
       }
-   }
+   },
 
    handleKeyUp(e) {
       if (e.keyCode === 13) {
          this.props.onSearch(this.state.searchingText);
       }
-   }
+   },
 
    render() {
-      const styles = {
-         fontSize: '1.5em',
-         width: '90%',
-         maxWidth: '350px'
-      };
+      // const styles = {
+      //    fontSize: '1.5em',
+      //    width: '90%',
+      //    maxWidth: '350px'
+      // };
 
       return (
-         <input 
+         <input
             type="text"
-            /* onChange={this.handleChange} */
-            onChange={e => this.setState({ searchingText: e.target.value })}
+            onChange={this.handleChange}
+            onKeyUp={this.handleKeyUp}
             placeholder="Tutaj wpisz wyszukiwaną frazę"
-            style={styles}
-            value={this.state.searchTerm}
+            /* style={styles} */
+            value={this.state.searchingText}
          />
       );
    }
-}
-
-Search.state = {
-   searchingText: ''
-};
+});
 
 export default Search;

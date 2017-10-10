@@ -1,3 +1,43 @@
-/* No CSS */ 
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  text-align: center;
+}
+
+body,
+body #app,
+body .wrp {
+  height: 100vh;
+}
+
+body .wrp {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 80%;
+  justify-content: center;
+}
+
+body .wrp > * {
+  margin: 10px;
+}
+
+body .wrp input {
+  border: 1px solid #006eff;
+  font-size: 1.5em;
+  max-width: 500px;
+  justify-self: center;
+}
+
+body .wrp a {
+  width: 100%;
+}
+
+body .wrp a img {
+  width: 500px;
+}
+ 
 
  /*# sourceMappingURL= style.css.map */
