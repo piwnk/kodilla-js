@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif //  border: 1px solid coral;
+}
+
+body {
+    margin: 0 auto;
+}
+
+.wrp {
+    .contactForm {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+    }
+    .contactsList {
+        list-style-type: none;
+        padding: 0;
+        width: 40vw;
+        .contactItem {
+            display: flex;
+            border: 1px solid rgb(0, 140, 255);
+            &>div {
+                &:first-child {
+                    .contactImage {
+                        width: 100px;
+                    }
+                }
+                &:last-child {
+                    margin-left: 20px;
+                    width: 300px;
+                    .contactList {
+                        .contactLabel {}
+                        .contactEmail {}
+                    }
+                }
+            }
+        }
+    }
+}
