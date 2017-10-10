@@ -1,17 +1,23 @@
 import React, { Component } from 'react';
 
-export default class App extends Component {
+import Search from './Search';
+import Gif from './Gif';
 
-   getInitialState() {
-      return {
-         loading: false,
-         searchingText: '',
-         gif: {}
-      }
-   };
+const GIPHY_API_URL = 'https://api.giphy.com/v1/';
+const GIPHY_PUB_KEY = 'MFElv6T1lSwzWh5LNM8XAofomIWKMKKJ';
 
-   getGif(searchingText, callback) {
-      const url = GIPHY_API_URL + 'v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText;
+
+class App extends Component {
+   // getInitialState() {
+   //    return {
+   //       loading: false,
+   //       searchingText: '',
+   //       gif: {}
+   //    }
+   // };
+
+   static getGif(searchingText, callback) {
+      const url = `${GIPHY_API_URL}/gifs/random?api_key=${GIPHY_PUB_KEY}&tag=${searchingText}`;
       const xhr = new XMLHttpRequest();
       xhr.open('GET', url);
       xhr.onload = () => {
@@ -20,11 +26,11 @@ export default class App extends Component {
             const gif = {
                url: data.fixed_width_donwsampled_url,
                sourceUrl: data.url
-            }
+            };
             callback(gif);
-         };
+         }
       };
-      xhr.send(); //why here?
+      xhr.send(); // why here?
    }
 
    handleSearch(searchingText) {
@@ -34,32 +40,42 @@ export default class App extends Component {
       this.getGif(searchingText, (gif) => {
          this.setState({
             loading: false,
-            gif: gif,
-            searchingText: searchingText
-         })
+            // gif: gif,
+            gif,
+            // searchingText: searchingText
+            searchingText
+         });
       });
-   };
+   }
 
    render() {
       const styles = {
          margin: '0 auto',
          textAlign: 'center',
          width: '90%'
-      }  
-      
+      };
+
       return (
          <div style={styles}>
             <h1>Wyszukiwarka GIFów!</h1>
             <p>Znajdź gifa na <a href="http://giphy.com">giphy</a>. Naciskaj, aby pobrać kolejne gify.</p>
-            <Search 
+            <Search
                onSearch={this.handleSearch}
             />
-            <Gif 
+            <Gif
                loading={this.state.loading}
                url={this.state.gif.url}
                sourceUrl={this.state.gif.sourceUrl}
             />
          </div>
       );
-   };
+   }
 }
+
+App.state = {
+   loading: false,
+   searchingText: '',
+   gif: {}
+};
+
+export default App;

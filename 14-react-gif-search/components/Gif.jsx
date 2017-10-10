@@ -4,7 +4,7 @@ const GIPHY_LOADING_URL = 'http://www.ifmo.ru/images/loader.gif';
 const styles = {
    minHeight: '310px',
    margin: '0.5em'
-}
+};
 
 export default class Gif extends Component {
 

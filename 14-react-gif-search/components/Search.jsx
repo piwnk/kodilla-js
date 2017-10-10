@@ -1,23 +1,22 @@
 import { Component } from 'react';
 
-export default class Search extends Component {
-   
-   getIinitialState() {
-      return {
-         searchingText: ''
-      }
-   };
-   
+class Search extends Component {
+   // getIinitialState() {
+   //    return {
+   //       searchingText: ''
+   //    }
+   // };
    handleChange(e) {
       const searchingText = e.target.value;
       this.setState({
-         searchingText: searchingText
-      })
+         // searchingText: searchingText
+         searchingText
+      });
 
       if (searchingText.length > 2) {
          this.props.onSearch(searchingText);
       }
-   };
+   }
 
    handleKeyUp(e) {
       if (e.keyCode === 13) {
@@ -41,6 +40,12 @@ export default class Search extends Component {
             style={styles}
             value={this.state.searchTerm}
          />
-      )
-   };
+      );
+   }
+}
+
+Search.state = {
+   searchingText: ''
 };
+
+export default Search;
