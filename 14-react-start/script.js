@@ -14,6 +14,7 @@ const movies = [
    }
 ];
 
+
 movies.map((movie) => {
    movie.id = movies.indexOf(movie) + 1;
 });
