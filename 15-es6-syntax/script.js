@@ -17,7 +17,7 @@ const multiply = (a = 1, b = 1) => `${a} multiplied by ${b} is ${a * b}`;
 console.log(multiply(2, 5));
 console.log(multiply(2));
 console.log(multiply());
-console.log(multiply(b=7));
+console.log(multiply(b = 7));
 
 // Task no 3/4
 console.log('Task no 3');
@@ -68,6 +68,8 @@ const Sum = arr => arr.reduce((a, b) => a + b);
 
 console.log(Sum([1, 2, 3, 4]));
 
+
+// reduce instead of map
 const getOccurrences = (arr) => {
    const result = {};
    arr.map((letter) => {
@@ -89,7 +91,7 @@ const transform = (s) => {
       console.log(letter);
       if (Object.keys(occurrences).includes(letter)) {
          result.push(letter);
-         result.push()
+         result.push();
          // arr.splice(arr.indexOf(letter) + 1, 0, occurrences[letter]);
       }
       // return Object.keys(occurrences).includes(letter)) ? 
