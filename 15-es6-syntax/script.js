@@ -24,7 +24,7 @@ console.log('Task no 3');
 
 const numbers = [1, 2, 3, 5];
 
-const average = (...args) => `Sum of ${args.join(', ')} is equal ${args.reduce((a, b) => a + b)}`;
+const average = (...args) => `Average of ${args.join(', ')} is equal ${args.reduce((a, b) => a + b) / args.length}`;
 
 console.log(average(...numbers));
 
@@ -99,4 +99,4 @@ const transform = (s) => {
  };
 
 const word = 'elevation';
-transform(word);
+// transform(word);
