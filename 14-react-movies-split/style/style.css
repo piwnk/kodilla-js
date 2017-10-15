@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  font-family: Calibri;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1px;
+}
+
+body ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style-type: none;
+  padding: 1px;
+}
+
+body ul li {
+  padding: 20px;
+  border: 1px solid #0084FF;
+  border-right: 0;
+}
+
+body ul li:last-child {
+  border-right: 1px solid #0084FF;
+}
+
+body ul li img {
+  height: 300px;
+}
+ 
+
+ /*# sourceMappingURL= style.css.map */

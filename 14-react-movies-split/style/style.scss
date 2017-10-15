@@ -1,0 +1,33 @@
+$blue-border: 1px solid #0084FF;
+
+* {
+   box-sizing: border-box;
+   font-family: Calibri;
+   text-align: center;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   grid-gap: 1px;
+   ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      list-style-type: none;
+      padding: 1px;
+      li {
+         padding: 20px;
+         border: $blue-border;
+         border-right: 0;
+         &:last-child {
+            border-right: $blue-border;
+         }
+
+         img {
+            height: 300px;
+         }
+      }
+   }
+}
