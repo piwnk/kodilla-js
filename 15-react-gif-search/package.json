@@ -6,7 +6,7 @@
   "scripts": {
     "start": "http-server",
     "build": "webpack --progress",
-    "build-watch": "webpack --progress --watch"
+    "bwatch": "webpack --progress --watch"
   },
   "keywords": [],
   "author": "",

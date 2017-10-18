@@ -25,6 +25,7 @@ module.exports = {
     // "linebreak-style": ["error", "never"],
 
     'linebreak-style': 0,
+    'func-names': 0,
     'indent': [
       2, 3
     ],
