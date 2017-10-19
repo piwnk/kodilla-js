@@ -12,7 +12,8 @@ class StopWatch {
       this.reset();
       this.print(this.times);
       this.results = [];
-      this.resultslistNode = document.getElementsByClassName('results')[0];
+      // this.resultslistNode = document.getElementsByClassName('results')[0];
+      [this.resultslistNode, ...others] = document.getElementsByClassName('results');
    }
 
    reset() {
@@ -29,8 +30,8 @@ class StopWatch {
       this.display.innerText = this.format(this.times);
    }
 
-   // WHY NOT this.times directly?
-   format(times) {
+   // WHY NOT this.times directly? Not static?
+   static format(times) {
       return `${times.minutes}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
    }
 
