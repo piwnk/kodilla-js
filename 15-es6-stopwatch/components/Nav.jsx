@@ -21,34 +21,57 @@ class Anchor extends Component {
             label={this.props.label}
             href="#"
             className="button"
-            onClick={() => { console.log(this.props.label); }}
+            onClick={ this.props.onClick } //do osobnej metody
          >{this.props.label.capitalize()}
          </a>
       );
    }
 }
 
-const Anchors = () => {
+const Anchors = ({ onStart, onStop, onReset, onSubmit }) => {
    const labels = ['start', 'stop', 'reset', 'submit'];
 
-   return labels
-      .map(item => ({
-         key: labels.indexOf(item),
-         label: item
-      }))
-      .map(({ key, label }) => (
-         <Anchor
-            key={key}
-            label={label}
-         />
-      ));
+   return (
+      <div>
+         <Anchor label="start" onClick={onStart}/>
+         <Anchor label="stop" onClick={onStop}/>
+         <Anchor label="reset" onClick={onReset}/>
+         <Anchor label="submit" onClick={onSubmit}/>
+      </div>
+   )
+
+   // return labels
+   //    .map(item => ({
+   //       key: labels.indexOf(item),
+   //       label: item
+   //    }))
+   //    .map(({ key, label }) => (
+   //       <Anchor
+   //          key={key}
+   //          label={label}
+   //       />
+   //    ));
 };
 
-const Nav = () => (
+const Nav = ({ onStart, onStop, onReset, onSubmit }) => (
    <nav>
-      <Anchors />
+      <Anchors
+         {...{
+            onStart,
+            onStop,
+            onReset,
+            onSubmit
+         }}
+      />
    </nav>
 );
+
+Nav.propTypes = {
+   onStart: PropTypes.func.isRequired,
+   onStop: PropTypes.func.isRequired,
+   onReset: PropTypes.func.isRequired,
+   onSubmit: PropTypes.func.isRequired
+};
 
 export default Nav;
 

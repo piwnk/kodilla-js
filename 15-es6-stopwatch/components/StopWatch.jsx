@@ -20,23 +20,23 @@ export default class StopWatch extends Component {
       super(props);
       console.log(this.props);
       console.log(props);
-      this.running = false;
-      this.reset();
-      this.print(this.times);
-   }
+   //    this.running = false;
+   //    this.reset();
+   //    this.print(this.times);
+   // }
 
    // WHY NOT this.times directly? Not static?
    format = times => `${times.minutes}:${pad0(times.seconds)}:${pad0(Math.floor(times.miliseconds))}`;
 
-   reset() {
-      this.times = {
-         minutes: 0,
-         seconds: 0,
-         miliseconds: 0
-      };
-      this.stop();
-      this.print();
-   }
+   // reset() {
+   //    this.times = {
+   //       minutes: 0,
+   //       seconds: 0,
+   //       miliseconds: 0
+   //    };
+   //    this.stop();
+   //    this.print();
+   // }
 
    print() {
       console.log(this.props);
